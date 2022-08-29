@@ -54,6 +54,7 @@ Thumbs.db
 /node_modules
 /.pnp
 .pnp.js
+.eslintcache
 
 # testing
 /coverage
