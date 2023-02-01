@@ -1,5 +1,12 @@
-.loading {
+.mealsLoading {
   text-align: center;
+  color: white;
+}
+
+.mealsError {
+  text-align: center;
+  color: red;
+  background-color: white;
 }
 
 .meals {

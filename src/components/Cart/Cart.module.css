@@ -44,3 +44,8 @@
   background-color: #8a2b06;
   color: white;
 }
+
+.orderSubmitting {
+  text-align: center;
+  color: green;
+}
