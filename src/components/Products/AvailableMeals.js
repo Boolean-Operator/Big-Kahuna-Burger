@@ -36,7 +36,8 @@ const AvailableMeals = () => {
     };
     fetchMeals().catch((error) => {
       setIsLoading(false);
-      setHttpError(error.message);
+      // setHttpError(error.message);
+      setHttpError('There was a problem loading the data, Michael.');
     });
   }, []);
 
