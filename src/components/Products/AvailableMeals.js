@@ -2,8 +2,9 @@ import Card from '../UI/Card';
 import MealItem from './MealItem/MealItem';
 import classes from './AvailableMeals.module.css';
 import { useEffect, useState } from 'react';
+import { getAvailableMeals } from './DummyData';
 
-const FIREBASE_DOMAIN = process.env.REACT_APP_API_URL;
+// const FIREBASE_DOMAIN = process.env.REACT_APP_API_URL;
 
 const AvailableMeals = () => {
   const [meals, setMeals] = useState([]);
@@ -12,12 +13,14 @@ const AvailableMeals = () => {
 
   useEffect(() => {
     const fetchMeals = async () => {
-      const response = await fetch(`${FIREBASE_DOMAIN}/meals.json`);
-      const data = await response.json();
+      const data = await getAvailableMeals();
+      // const response = await fetch(`${FIREBASE_DOMAIN}/meals.json`);
+      console.log(data);
+      // const data = await response.json();
 
-      if (!response.ok) {
-        throw new Error('There was a problem loading the data, Michael.');
-      }
+      // if (!response.ok) {
+      //   throw new Error('There was a problem loading the data, Michael.');
+      // }
 
       const loadedMeals = [];
 
@@ -30,6 +33,7 @@ const AvailableMeals = () => {
         };
         loadedMeals.push(mealObj);
       }
+      console.log(loadedMeals);
 
       setMeals(loadedMeals);
       setIsLoading(false);
