@@ -90,8 +90,7 @@ const Cart = (props) => {
   const didSubmitOrderModalContent = (
     <>
       <h3 className={classes.orderSubmitting}>
-        Order has been placed. We will contact you when your order is ready for
-        pickup...
+        Order has been placed. Thank you.
       </h3>
       <div className={classes.actions}>
         <button className={classes.button} onClick={props.onClose}>
