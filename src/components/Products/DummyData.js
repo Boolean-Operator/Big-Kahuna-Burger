@@ -75,7 +75,3 @@ const LIVE_MEALS = {
     price: 14,
   },
 };
-
-export async function getAvailableMeals() {
-  return LIVE_MEALS;
-}
